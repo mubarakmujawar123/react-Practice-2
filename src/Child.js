@@ -1,10 +1,8 @@
 import React from 'react';
 
 const Child = (props) => {
-  const parentGreetHandler = () => {
-    props.greetHandlerFunction('Child 1');
-  };
-  return <button onClick={parentGreetHandler}>Greet parent</button>;
+  console.log('In Child');
+  return <h1>{props.name}</h1>;
 };
 
-export default Child;
+export default React.memo(Child);
